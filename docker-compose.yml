@@ -1,0 +1,19 @@
+services:
+  app-server:
+    build: .
+    image: app-server:1.0.0
+    # stdin_open: true
+    ports:
+      - "3000:3000"
+      # - "24678:24678"
+    container_name: app
+
+  # db:
+  #   image: postgres
+  #   restart: always
+  #   ports:
+  #     - 5432:5432
+  #   environment: 
+  #     POSTGRES_USER: root
+  #     POSTGRES_PASSWORD: mysecretpassword
+  #     POSTGRES_DB: local
